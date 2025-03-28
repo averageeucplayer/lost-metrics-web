@@ -14,7 +14,11 @@ Yew web app
 git clone https://github.com/averageeucplayer/lost-metrics-web.git
 ```
 
-### 2️⃣ Build and run trunk
+### 2️⃣ Run tailwind watcher, build cargo and run trunk
+
+```
+npx @tailwindcss/cli -i ./styles/main.css -o ./styles/output.css --watch
+```
 
 ```toml
 cd lost-metrics-web
