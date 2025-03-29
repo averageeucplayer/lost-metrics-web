@@ -1,4 +1,9 @@
 mod app;
+mod pages;
+mod routes;
+mod models;
+mod components;
+mod layout;
 use app::App;
 use log::Level;
 
