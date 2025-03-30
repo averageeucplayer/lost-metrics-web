@@ -1,4 +1,13 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+    --font-roboto: "Roboto", sans-serif; 
+    --font-tinos: "Tinos", sans-serif; 
+}
 
 :root {
     --main-bg-color: #000;

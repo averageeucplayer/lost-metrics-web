@@ -1,6 +1,11 @@
 [build]
 target = "./index.html"
 
+[[hooks]]
+stage = "build"
+command = "cmd"
+command_arguments = ["/c npx @tailwindcss/cli -i styles/main.css -o styles/output.css"]
+
 [serve]
 port = 1420
 open = false

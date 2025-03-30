@@ -4,6 +4,8 @@ mod routes;
 mod models;
 mod components;
 mod layout;
+mod side_bar;
+mod task_bar;
 use app::App;
 use log::Level;
 

@@ -6,6 +6,12 @@ use crate::pages::*;
 pub enum Route {
     #[at("/")]
     Home,
+    #[at("/meter")]
+    Meter,
+    #[at("/simulator")]
+    Simulator,
+    #[at("/settings")]
+    Settings,
     #[not_found]
     #[at("/404")]
     NotFound,
@@ -14,6 +20,9 @@ pub enum Route {
 pub fn switch(routes: Route) -> Html {
     match routes {
         Route::Home => html! { <Home/> },
+        Route::Settings => html! { <SettingsPage/> },
+        Route::Meter => html! { <Meter/> },
+        Route::Simulator => html! { <Simulator/> },
         Route::NotFound => html! { <h1>{ "404" }</h1> },
     }
 }
