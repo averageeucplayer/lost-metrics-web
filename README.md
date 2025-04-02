@@ -25,3 +25,6 @@ cd lost-metrics-web
 cargo build
 trunk serve
 ```
+
+https://daisyui.com/components
+https://tabler.io/icons

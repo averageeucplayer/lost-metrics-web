@@ -1,0 +1,46 @@
+<!doctype html>
+<html data-theme="cerberus" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+        <meta name="viewport" content="width=device-width" />
+        %sveltekit.head%
+        <style>
+            .loader-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            .loader {
+                width: 120px;
+                height: 20px;
+                -webkit-mask: linear-gradient(90deg,#000 70%,#0000 0) left/20% 100%;
+                background:
+                linear-gradient(#000 0 0) left -25% top 0 /20% 100% no-repeat#ddd;
+                animation: l7 1s infinite steps(6);
+            }
+
+            html, body {
+                height: 100%
+            }
+
+            body {
+                background: #000;
+                margin: 0;
+            }
+            
+            @keyframes l7 {
+                100% {background-position: right -25% top 0}
+            }
+        </style>
+    </head>
+    <body data-sveltekit-preload-data="hover" class="text-xxs text-white select-none">
+        <div style="display: contents">%sveltekit.body%
+            <!-- <div class="loader-wrapper">
+                <div class="loader"></div>
+            </div> -->
+        </div>
+    </body>
+</html>
