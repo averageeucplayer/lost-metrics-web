@@ -4,7 +4,7 @@
     import type { MeterSettings, SnifferSettings, UpdaterSettings } from '$lib/types';
     import { onMount, type Snippet } from 'svelte';
     import { writable } from 'svelte/store';
-    
+
     interface Props {
         children?: Snippet;
     }

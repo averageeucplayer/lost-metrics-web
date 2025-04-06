@@ -1,9 +1,10 @@
 <script lang="ts">
     import { load } from '$lib/api';
-    import { setAppState, type AppState } from '$lib/store/app';
+    import { setAppState } from '$lib/store/app';
     import { onMount, type Snippet } from 'svelte';
     import { writable } from 'svelte/store';
-    
+    import type { AppState } from '$lib/types';
+
     interface Props {
         children?: Snippet;
     }

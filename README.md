@@ -1,10 +1,9 @@
-![rustc](https://img.shields.io/badge/rustc-1.85.0-blue.svg)
 [![codecov](https://codecov.io/gh/averageeucplayer/lost-metrics-web/graph/badge.svg?token=HHRGYYUNM2)](https://codecov.io/gh/averageeucplayer/lost-metrics-web)
 ![CI](https://github.com/averageeucplayer/lost-metrics-web/actions/workflows/ci.yml/badge.svg)
 
 # 🌐 Lost Metrics Web
 
-Yew web app
+Svelte web app
 
 ## 📦 Installation & Setup
 
@@ -26,5 +25,6 @@ cargo build
 trunk serve
 ```
 
-https://daisyui.com/components
-https://tabler.io/icons
+### Credits
+
+[Icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/universe)
