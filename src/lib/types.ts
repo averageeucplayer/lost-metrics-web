@@ -57,22 +57,51 @@ export interface GetPastEncountersCriteria {
     
 }
 
+export interface FormattedValue {
+    raw: number;
+    value: number;
+    unit: string;
+    formatted: string;
+}
+
+export interface PlayerStats {
+    totalDamage: FormattedValue;
+    totalDamagePercentageToParty: number;
+    totalDamagePercentageToRaid: number;
+}
+
+export interface Player {
+    id: number;
+    name: string;
+    classId: number;
+    className: string;
+    stats: PlayerStats;
+}
+
 export interface Encounter {
     id: String;
     name: string;
     classes: string;
     duration: {
         mmss: number;
-    }
+    };
+    startedOn: string;
+    participants: Player[]
 }
 
 export interface EncounterMonitor {
-    encounter?: Encounter
+    encounter?: Encounter;
+    duration: {
+        raw: number;
+        mmss: string;
+    }
 }
 
 export interface GetPastEncountersResult {
     pageSize: number;
-    items: Encounter[]
+    items: Encounter[];
+    total: number;
+    page: number;
 }
 
 export interface UpdateCheckResult {
@@ -83,7 +112,7 @@ export interface UpdateCheckResult {
 export interface ProcessWatcherResult {
     checkedOn: string;
     state: {
-        type: String;
+        type: "ProcessNotRunning";
     };
 }
 

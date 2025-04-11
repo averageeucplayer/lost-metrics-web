@@ -18,7 +18,6 @@
 		pageSizes: [1, 2, 5, 10],
 		items: []
 	});
-	// const slicedSource = $derived((s: SourceData[]) => s.slice((page - 1) * size, page * size));
 
 	onMount(() => {
 		onLoad()

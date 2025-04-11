@@ -19,7 +19,13 @@ export const getStats = (): Promise<GetStatsResult> => {
 }
 
 export const getPastEncounters = (criteria: GetPastEncountersCriteria): Promise<GetPastEncountersResult> => {
-    return invoke<GetPastEncountersResult>("get_past_encounters");
+    return invoke<GetPastEncountersResult>("get_past_encounters", { criteria});
+}
+
+export const onEncounterClear = (handler: () => void): Promise<UnlistenFn> => {
+    return listen<Encounter>("encounter-clear", (event) => {
+        handler();
+    });
 }
 
 export const onEncounterUpdate = (handler: (encounter: Encounter) => void): Promise<UnlistenFn> => {

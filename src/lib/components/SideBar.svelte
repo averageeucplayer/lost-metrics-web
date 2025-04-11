@@ -13,7 +13,7 @@
 
     const appState = useAppState();
 
-	console.log(page.url);
+	console.log(page.url.pathname);
 
 </script>
 
@@ -28,15 +28,15 @@
 	</div>
 {:else}
 	<div class="card border-surface-100-900 grid h-screen w-full grid-cols-[auto_1fr] border-[1px]">
-		<Navigation.Rail value={"stats"}>
+		<Navigation.Rail value={page.url.pathname}>
 			{#snippet tiles()}
-			<Navigation.Tile href="/info" label="Info"><IconInfoCircle /></Navigation.Tile>
-			<Navigation.Tile href="/" id="stats" label="Stats"><IconDeviceDesktopAnalytics /></Navigation.Tile>
-			<Navigation.Tile href="/meter" label="Meter"><IconGauge /></Navigation.Tile>
-			<Navigation.Tile href="/history" label="History"><IconHistory /></Navigation.Tile>
-			<Navigation.Tile href="/simulator" label="Simulator"><IconDeviceGamepad /></Navigation.Tile>
-			<Navigation.Tile href="/settings" label="Settings"><IconAdjustmentsAlt /></Navigation.Tile>
-			<Navigation.Tile href="/debug" label="Debug"><IconBug /></Navigation.Tile>
+			<Navigation.Tile href="/info" id="/info" label="Info"><IconInfoCircle /></Navigation.Tile>
+			<Navigation.Tile href="/" id="/" label="Stats"><IconDeviceDesktopAnalytics /></Navigation.Tile>
+			<Navigation.Tile href="/meter" id="/meter" label="Meter"><IconGauge /></Navigation.Tile>
+			<Navigation.Tile href="/history" id="/history" label="History"><IconHistory /></Navigation.Tile>
+			<Navigation.Tile href="/simulator" id="/simulator" label="Simulator"><IconDeviceGamepad /></Navigation.Tile>
+			<Navigation.Tile href="/settings" id="/settings" label="Settings"><IconAdjustmentsAlt /></Navigation.Tile>
+			<Navigation.Tile href="/debug" id="/debug" label="Debug"><IconBug /></Navigation.Tile>
 			{/snippet}
 		</Navigation.Rail>
 	
